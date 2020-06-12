@@ -21,6 +21,8 @@ class Student
      SQL
      
      DB[:conn].execute(sql, name).map do |row|
+       self
+      end 
     # find the student in the database given a name
     # return a new instance of the Student class
   end
