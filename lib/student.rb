@@ -17,7 +17,7 @@ class Student
 
   def self.find_by_name(name)
      sql = <<-SQL
-        SELECT * FROM student WHERE name = ? LIMIT 1
+        SELECT * FROM students WHERE name = ? LIMIT 1
      SQL
      
      DB[:conn].execute(sql, name).map do |row|
