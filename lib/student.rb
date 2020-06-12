@@ -17,7 +17,7 @@ class Student
 
   def self.find_by_name(name)
      sql = <<-SQL
-        SELECT * FROM student WHERE name = ? 
+        SELECT * FROM student WHERE name = ? LIMIT 1
      SQL
     # find the student in the database given a name
     # return a new instance of the Student class
