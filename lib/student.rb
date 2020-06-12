@@ -43,7 +43,7 @@ class Student
     sql = <<-SQL
       SELECT * FROM students WHERE students.grade = ?
     SQL
-      students = DB[:conn].execute(sql)
+    students = DB[:conn].execute(sql)
   end
   def self.all_students_in_grade_9
     sql = <<-SQL
