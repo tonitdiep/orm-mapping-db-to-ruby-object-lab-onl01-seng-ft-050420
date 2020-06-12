@@ -19,7 +19,8 @@ class Student
     sql = <<-SQL
       SELECT * FROM students WHERE students.grade = 9
     SQL
-    DB[:conn].execute(sql).map
+    DB[:conn].execute(sql).map do |row|
+      self.
   end
   def self.find_by_name(name)
      sql = <<-SQL
