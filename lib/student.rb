@@ -20,7 +20,7 @@ class Student
         SELECT * FROM student WHERE name = ? LIMIT 1
      SQL
      
-     DB[:conn].excecute(sql, name)
+     DB[:conn].execute(sql, name)
     # find the student in the database given a name
     # return a new instance of the Student class
   end
