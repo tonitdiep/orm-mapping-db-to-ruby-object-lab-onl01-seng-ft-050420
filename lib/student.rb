@@ -20,11 +20,11 @@ class Student
     # remember each row should be a new instance of the Student class
   end
   
-  def self.first_X_students_in_grade_10(X)
+  def self.first_X_students_in_grade_10(x)
     sql = <<-SQL
       SELECT * FROM students WHERE students.grade = 10 LIMIT ?
     SQL
-    students = DB[:conn].execute(sql, X).map do |row|
+    students = DB[:conn].execute(sql, x).map do |row|
       self.new_from_db(row)
     end
   end  
