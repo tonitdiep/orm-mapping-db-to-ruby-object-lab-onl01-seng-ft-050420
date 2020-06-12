@@ -24,7 +24,7 @@ class Student
     sql = <<-SQL
       SELECT * FROM students WHERE students.grade = 10 LIMIT ?
     SQL
-    DB[:conn].execute(sql, x).map do |row|
+    DB[:conn].execute(sql, X).map do |row|
       
   end  
   
