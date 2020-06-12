@@ -26,6 +26,7 @@ class Student
     SQL
     DB[:conn].execute(sql, X).map do |row|
       self.new_from_db(row)
+    end
   end  
   
   def self.all_students_in_grade_9
